@@ -8,7 +8,7 @@
 .mainC {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     align-self: center;
     align-items: center;
     border: 2px solid #FFBF00;
@@ -34,4 +34,20 @@
     height: 40px;
     background-color: #FFBF00	;
     align-self: center;
+}
+
+.buttonContent1 {
+    width: 60%;
+    height: 40px;
+    background-color: #fff	;
+    align-self: center;
+    border: #fff;
+}
+
+.buttonContent2 {
+    width: 60%;
+    height: 40px;
+    background-color: #ebe7dd	;
+    align-self: center;
+    border: 1px solid #808080;
 }

@@ -1,16 +1,18 @@
-<p>login works!</p>
-<form [formGroup]="loginForm">
-    <p>
-      E-mail id:
-      <input type="email" value="" placeholder="Enter email" formControlName="email">
-      <!-- <span *ngIf="loginForm.controls.email.value === '' && show" style="color: black;">Email is required.</span> -->
-    </p>
-    <p>
-      Password:
-      <input type="password" value="" placeholder="Enter password" formControlName="password">
-      <!-- <span *ngIf="loginForm.controls.password.value === '' && show" style="color: black;">Password is required.</span> -->
-    </p>
-    <p>
-      <button (click)="onSubmitLogin()">Submit</button>
-    </p>
-  </form>
+<div class="parent">
+  <form class= "mainC" [formGroup]="loginForm">
+    <h2>Login</h2>
+      <p class="inputContainer">
+        E-mail id:
+        <input class="inputField" type="email" value="" placeholder="Enter email" formControlName="email">
+        <!-- <span *ngIf="loginForm.controls.email.value === '' && show" style="color: black;">Email is required.</span> -->
+      </p>
+      <p class="inputContainer">
+        Password:
+        <input class="inputField" type="password" value="" placeholder="Enter password" formControlName="password">
+        <!-- <span *ngIf="loginForm.controls.password.value === '' && show" style="color: black;">Password is required.</span> -->
+      </p>
+      <p class="inputContainer">
+        <button class="buttonContent" (click)="onSubmitLogin()">Login</button>
+      </p>
+    </form>
+</div>

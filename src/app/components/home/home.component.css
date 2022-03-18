@@ -1,10 +1,13 @@
+.mainContainer {
+  display: flex;
+  flex: 1;
+}
+
 .homeImg {
-    flex: 1;
     background-color: #FFFFFF;
     /* background-image: ; */
-    width: 50%;
-    border: 2px solid #9ACD32;
-    padding: 25%;
+    height: 100%;
+    width: 100%;
     align-items: center;
   }
 
