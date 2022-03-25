@@ -48,9 +48,9 @@ export class RegistrationComponent implements OnInit {
   signUp(){
     this.router.navigate(['login'])
   }
-  forgotPassword(){
-    this.router.navigate(['forgot_password'])
-  }
+  // forgotPassword(){
+  //   this.router.navigate(['forgot_password'])
+  // }
   }
 
 
