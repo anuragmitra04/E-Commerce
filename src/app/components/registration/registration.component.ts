@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UserService } from "../../services/user.service";
 
 @Component({
   selector: 'app-registration',
@@ -10,13 +11,14 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class RegistrationComponent implements OnInit {
 
   SignUpForm: FormGroup 
-  constructor(private router: Router) { 
+  constructor(private router: Router, private api: UserService) { 
     this.SignUpForm = new FormGroup({
-      register_name: new FormControl('', [Validators.required]),
-      register_number: new FormControl('', [Validators.required]),
-      register_email: new FormControl('', [Validators.required]),
-      register_password: new FormControl('', [Validators.required]),
-      register_confirm_password: new FormControl('', [Validators.required]),
+      userName: new FormControl('', [Validators.required]),
+      mobile: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required]),
+      address: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
+      // register_confirm_password: new FormControl('', [Validators.required]),
 
 
 
@@ -29,7 +31,14 @@ export class RegistrationComponent implements OnInit {
 
   onSubmitSignUp(){
     if (this.SignUpForm.valid) {
-      alert('Sign up successfull!')
+      const data=this.SignUpForm
+      // console.log(data.value, "REQUEST")
+      this.api.signUpData(data.value).subscribe(response=>{
+        // console.log(response, "RESPOENSE")
+        alert(response.msg);
+        this.router.navigate(['dashboard'])
+      })
+      // alert('Sign up successfull!')
       
     } else {
       alert('not successfyll!')

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import {Router} from "@angular/router";//redirect page
 
 @Component({
@@ -10,7 +10,12 @@ export class HeaderComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  // onNotifyClicked(userData: any):void{
+  //   console.log(userData)
+  // }
+
   ngOnInit(): void {
+
   }
 
   login(){

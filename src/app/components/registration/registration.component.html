@@ -3,33 +3,40 @@
   <h2>WELCOME TO SIGN UP</h2> 
       <p class="inputContainer">
         Name:
-        <input class="inputField"  type="text" value="" placeholder="Enter name" formControlName="register_name">
+        <input class="inputField"  type="text" value="" placeholder="Enter name" formControlName="userName">
         <!-- <span *ngIf="SignUpForm.controls.name.value === '' && show" style="color: black;">Password is required.</span> -->
       </p>
 
       <p class="inputContainer">
         Mobile No:
-        <input class="inputField" type="number" value="" placeholder="Enter Mobile No" formControlName="register_number">
+        <input class="inputField" type="number" value="" placeholder="Enter Mobile No" formControlName="mobile">
         <!-- <span *ngIf="SignUpForm.controls.Mobile No.value === '' && show" style="color: black;">Password is required.</span> -->
       </p>
 
 
       <p class="inputContainer">
       E-mail id:
-      <input class="inputField" type="email" value="" placeholder="Enter email" formControlName="register_email">
+      <input class="inputField" type="email" value="" placeholder="Enter email" formControlName="email">
       <!-- <span *ngIf="SignUpForm.controls.email.value === '' && show" style="color: black;">Email is required.</span> -->
-    </p>
-    <p class="inputContainer">
-      Password:
-      <input class="inputField" type="password" value="" placeholder="Enter password" formControlName="register_password">
-      <!-- <span *ngIf="SignUpForm.controls.password.value === '' && show" style="color: black;">Password is required.</span> -->
     </p>
 
     <p class="inputContainer">
+      Address:
+      <input class="inputField" type="text" value="" placeholder="Enter address" formControlName="address">
+      <!-- <span *ngIf="SignUpForm.controls.email.value === '' && show" style="color: black;">Email is required.</span> -->
+    </p>
+    
+    <p class="inputContainer">
+      Password:
+      <input class="inputField" type="password" value="" placeholder="Enter password" formControlName="password">
+      <!-- <span *ngIf="SignUpForm.controls.password.value === '' && show" style="color: black;">Password is required.</span> -->
+    </p>
+
+    <!-- <p class="inputContainer">
         Confirm Password:
         <input class="inputField" type="Confirm password" value="" placeholder="Enter confirm password" formControlName="register_confirm_password">
-        <!-- <span *ngIf="SignUpForm.controls. ConfirmPassword.value === '' && show" style="color: black;">Password is required.</span> -->
-      </p>
+         <span *ngIf="SignUpForm.controls. ConfirmPassword.value === '' && show" style="color: black;">Password is required.</span> -->
+      <!-- </p>  -->
       <p class="inputContainer">
       <button class="buttonContent" (click)="onSubmitSignUp()">Sign up</button>
       <button class="buttonContent1" (click)="signUp()">Are you already registerd? Login</button>
